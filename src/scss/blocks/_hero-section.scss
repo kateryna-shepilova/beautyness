@@ -1,0 +1,125 @@
+@use "./layout/variables" as *;
+
+.hero-section {
+  position: relative;
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    display: block;
+    background: $light;
+    z-index: -1;
+  }
+  .col-left {
+    padding: 50px 20px;
+    @media (min-width: $tablet) {
+      width: 54%;
+      padding: 90px 60px 90px 0;
+    }
+    @media (min-width: $pc) {
+      padding: 150px 150px 150px 0;
+    }
+  }
+  .col-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    @media (min-width: $tablet) {
+      width: 46%;
+    }
+  }
+  .subtitle {
+    text-transform: none;
+  }
+  .text {
+    margin-bottom: 24px;
+    @media (min-width: $pc) {
+      margin-bottom: 34px;
+    }
+  }
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .bg-dark-green {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    left: -20px;
+    height: 100%;
+    display: block;
+    background-image: url('../images/bg.webp');
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: contain;
+    @media (min-width: $tablet) {
+      left: 0;
+    }
+    @media (min-width: 1240px) {
+      right: calc(600px - 50vw);
+    }
+  }
+  .image-holder {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    margin: 20px 0;
+    @media (min-width: $tablet) {
+      max-width: 250px;
+      padding: 0;
+      width: 100%;
+    }
+    @media (min-width: $laptop) {
+      max-width: 350px;
+    }
+    @media (min-width: $pc-xl) {
+      max-width: 550px;
+    }
+    &:before {
+      content: '';
+      border: 5px solid $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: -1;
+      @media (min-width: $tablet) {
+        border-left: 0;
+        width: calc(100% - 10px);
+        height: calc(100% + 50px);
+        left: -1px;
+        transform: translateY(-50%);
+      }
+      @media (min-width: $pc) {
+        border-width: 10px;
+        width: calc(100% - 28px);
+        height: calc(100% + 100px);
+      }
+    }
+  }
+  img {
+    box-shadow: 0 20px 60px rgba(#2F4449, 0.46);
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 550/545;
+    @media (min-width: $tablet) {
+      transform: translateX(-39px);
+    }
+    @media (min-width: $pc) {
+      transform: translateX(-78px);
+    }
+  }
+}

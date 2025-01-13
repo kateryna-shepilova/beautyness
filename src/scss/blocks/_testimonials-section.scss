@@ -1,0 +1,79 @@
+@use "./layout/variables" as *;
+
+.testimonials-section {
+  padding: 50px 0;
+  @media (min-width: $laptop) {
+    padding: 75px 0;
+  }
+  @media (min-width: $pc-xl) {
+    padding: 150px 0;
+  }
+  .top-holder {
+    text-align: center;
+    max-width: 555px;
+    width: 100%;
+    margin: 0 auto 20px;
+    @media (min-width: $laptop) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.testimonials {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  @media (min-width: $pc-xl) {
+    gap: 36px;
+  }
+  .testimonial {
+    margin-bottom: 40px;
+    @media (min-width: $tablet) {
+      width: calc(50% - 10px);
+      margin-bottom: 0;
+    }
+    @media (min-width: $pc-xl) {
+      width: calc(50% - 18px);
+    }
+  }
+  .author {
+    background: $dark-green;
+    color: $white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 80px 20px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    @media (min-width: $laptop) {
+      padding: 26px 150px 26px 51px;
+    }
+    &.icon-quote {
+      position: relative;
+      &:before {
+        font-size: 28px;
+        left: auto;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        @media (min-width: $laptop) {
+          font-size: 55px;
+          right: 50px;
+        }
+      }
+    }
+    .name {
+      color: inherit;
+      margin-bottom: 0;
+    }
+    .photo {
+      width: 74px;
+    }
+    .text-info {
+      width: calc(100% - 94px);
+    }
+  }
+}

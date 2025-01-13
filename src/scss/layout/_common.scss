@@ -1,0 +1,180 @@
+@use "./layout/variables" as *;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $base-font;
+  font-size: $font-size;
+  color: $gray;
+  background-color: $white;
+  line-height: 1.55;
+  font-weight: 400;
+  overflow-x: hidden;
+  @media (min-width: $pc) {
+    font-size: 18px;
+  }
+  &.menu-active {
+    overflow: hidden;
+  }
+}
+
+.page-holder {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $headings-font;
+  color: $dark;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  @media (min-width: $laptop) {
+    margin-bottom: 24px;
+  }
+}
+
+p {
+  margin: 0 0 8px;
+  @media (min-width: $pc-xl) {
+    margin-bottom: 16px;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 38px;
+  @media (min-width: $laptop) {
+    font-size: 46px;
+  }
+  @media (min-width: $pc-xl) {
+    font-size: 70px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  @media (min-width: $laptop) {
+    font-size: 38px;
+  }
+  @media (min-width: $pc-xl) {
+    font-size: 45px;
+    margin-bottom: 16px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 22px;
+  @media (min-width: $laptop) {
+    font-size: 26px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+  @media (min-width: $laptop) {
+    font-size: 22px;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 20px;
+}
+
+h6,
+.h6 {
+  font-size: 18px;
+}
+
+p {
+
+}
+
+a {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.orange-text {
+  color: $orange;
+}
+
+blockquote {
+  border-top: 1px solid rgba($black, 0.11);
+  padding-top: 16px;
+  margin: 16px 0 0;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    font-size: 24px;
+  }
+}
+
+.subtitle {
+  color: $dark-blue;
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+  &.icon-warning {
+    &:before {
+      position: static;
+      margin-right: 9px;
+      font-size: 21px;
+      vertical-align: text-bottom;
+    }
+  }
+}
+
+blockquote {
+  border: 0;
+  margin: 0;
+  padding: 1em 0;
+  font-size: 17px;
+  @media (min-width: $pc) {
+  padding: 2.44em 2.66em;
+    font-size: 19px;
+  }
+}

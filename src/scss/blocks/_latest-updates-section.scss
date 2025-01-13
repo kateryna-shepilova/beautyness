@@ -1,0 +1,75 @@
+@use "./layout/variables" as *;
+
+.latest-updates-section{
+  padding: 50px 0;
+  @media (min-width: $laptop) {
+    padding: 75px 0;
+  }
+  @media (min-width: $pc-xl) {
+    padding: 150px 0;
+  }
+  .top-holder {
+    text-align: center;
+    margin-bottom: 20px;
+    @media (min-width: $laptop) {
+      margin-bottom: 40px;
+    }
+  }
+  .btn-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.latest-updates {
+  margin-bottom: 40px;
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 44px;
+    margin-bottom: 80px;
+  }
+  .post {
+    margin-bottom: 40px;
+    @media (min-width: $tablet) {
+      width: calc(33.33% - 30px);
+      margin-bottom: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    a {
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+      &:hover {
+      	color: $dark-blue;
+      }
+    }
+  }
+  .image {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+  .meta-info {
+    color: $dark-blue;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    a {
+      transition: all 0.3s ease-in-out;
+      &:hover {
+      	color: $black;
+      }
+    }
+  }
+  p {
+    &:last-child {
+        margin-bottom: 0;
+    }
+  }
+}

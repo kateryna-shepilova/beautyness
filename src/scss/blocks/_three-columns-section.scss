@@ -1,0 +1,60 @@
+@use "./layout/variables" as *;
+
+.three-columns-section {
+  padding: 50px 0;
+  @media (min-width: $laptop) {
+    padding: 75px 0;
+  }
+  @media (min-width: $pc-xl) {
+    padding: 150px 0;
+  }
+}
+
+.three-columns {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  @media (min-width: $pc-xl) {
+    gap: 105px;
+  }
+  .item {
+    margin-bottom: 40px;
+    @media (min-width: $tablet) {
+      width: calc(33.33% - 20px);
+      margin-bottom: 0;
+    }
+    @media (min-width: $pc-xl) {
+      width: calc(33.33% - 70px);
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+  }
+  .image {
+    margin-bottom: 13px;
+    @media (min-width: $pc-xl) {
+      margin-bottom: 26px;
+    }
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  .title {
+    margin-bottom: 11px;
+  }
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .text {
+    margin-bottom: 15px;
+    @media (min-width: $pc-xl) {
+      margin-bottom: 30px;
+    }
+  }
+}

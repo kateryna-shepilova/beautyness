@@ -1,0 +1,36 @@
+@use "./layout/variables" as *;
+
+.btn {
+  background: $dark-blue;
+  color: $white;
+  border: 1px solid $dark-blue;
+  display: inline-block;
+  width: fit-content;
+  border-radius: 0;
+  padding: 0.88em 1.83em;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: $dark;
+    border-color: $dark;
+  }
+  &.icon-calendar {
+    &:before {
+      position: static;
+      margin-right: 12px;
+    }
+  }
+  &.btn-outline {
+    color: $dark;
+    background: transparent;
+    &:hover {
+      background: $dark-blue;
+      border-color: $dark-blue;
+      color: $white;
+    }
+  }
+}
