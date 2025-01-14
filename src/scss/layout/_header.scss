@@ -189,7 +189,7 @@
     display: inline-block;
     transition: all 0.3s ease-in-out;
     &:hover {
-    	color: $dark-blue;
+      color: $dark-blue;
     }
     &:before {
       font-size: 19px;
@@ -268,7 +268,7 @@
     font-size: 18px;
   }
   &:hover {
-  	color: $dark-blue;
+    color: $dark-blue;
   }
   &.icon-phone {
     &:before {

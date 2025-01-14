@@ -6,9 +6,4 @@ document.addEventListener('DOMContentLoaded', function () {
     menuToggle.addEventListener('click', function () {
         body.classList.toggle('menu-active');
     });
-
-    // fancybox
-    Fancybox.bind("[data-fancybox]", {
-        // Your custom options
-    });
 });

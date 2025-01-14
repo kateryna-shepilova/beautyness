@@ -1,6 +1,6 @@
 @use "./layout/variables" as *;
 
-.latest-updates-section{
+.latest-updates-section {
   padding: 50px 0;
   @media (min-width: $laptop) {
     padding: 75px 0;
@@ -37,13 +37,13 @@
       margin-bottom: 0;
     }
     &:last-child {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
     a {
       transition: all 0.3s ease-in-out;
       text-decoration: none;
       &:hover {
-      	color: $dark-blue;
+        color: $dark-blue;
       }
     }
   }
@@ -63,13 +63,13 @@
     a {
       transition: all 0.3s ease-in-out;
       &:hover {
-      	color: $black;
+        color: $black;
       }
     }
   }
   p {
     &:last-child {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
   }
 }
